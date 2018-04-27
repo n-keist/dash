@@ -1,0 +1,13 @@
+#include("ref/widget/head.vm")
+#parse("ref/widget/navbar.vm")
+
+<div class="container" style="margin-top: 1rem;">
+    #if($errorAvailable)
+        <div class="alert alert-$failed.type">$failed.message</div>
+        <a href="/app/login" class="btn btn-primary">Zurück zum Login</a>
+    #else
+        <p>Admins Only </p>
+    #end
+</div>
+
+#include("ref/widget/foot.vm")

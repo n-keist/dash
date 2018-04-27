@@ -1,0 +1,26 @@
+#include("ref/widget/head.vm")
+
+<div class="container" style="margin-top: 7rem;">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <div id="login-notification"></div>
+                    <form action="/internal/post/login" method="post" id="formLogin">
+                        <div class="form-group">
+                            <label class="col-form-label col-form-label-lg" for="inputUsername">Username</label>
+                            <input class="form-control form-control-lg" name="username" type="text" placeholder="u s e r n a m e" id="inputUsername" />
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label col-form-label-lg" for="inputPassword">Password</label>
+                            <input class="form-control form-control-lg" name="password" type="password" placeholder="p a s s w o r d" id="inputPassword" />
+                        </div>
+                        <button class="btn btn-primary" type="submit">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+#include("ref/widget/foot.vm")
