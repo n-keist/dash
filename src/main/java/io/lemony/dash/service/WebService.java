@@ -6,6 +6,7 @@ import io.lemony.dash.service.route.Create;
 import io.lemony.dash.service.route.Login;
 import io.lemony.dash.service.route.Root;
 import io.lemony.dash.service.route.internal.Register;
+import io.lemony.dash.service.route.websocket.Stream;
 import spark.Spark;
 
 import java.sql.PreparedStatement;
@@ -19,6 +20,8 @@ public class WebService {
 
     private WebService() {
         Spark.port(80);
+
+        webSocket("/stream", Stream.class);
 
         staticFiles.location("/res/");
 
@@ -61,7 +64,6 @@ public class WebService {
         });
 
         path("/internal", () -> path("/post", WebService::addRoutes));
-
 
     }
 

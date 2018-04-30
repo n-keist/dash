@@ -1,0 +1,10 @@
+.the-rocket {
+    -webkit-transition: all ease-in-out .3s;
+    -moz-transition: all ease-in-out .3s;
+    -ms-transition: all ease-in-out .3s;
+    -o-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
+}
+.the-rocket :hover {
+    color: #a54caa;
+}

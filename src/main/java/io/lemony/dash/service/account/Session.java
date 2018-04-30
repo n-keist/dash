@@ -16,6 +16,10 @@ public class Session {
 
     public Session(Request request) {
         this.request = request;
+        if(this.cookieAvailable()) {
+            this.token = this.getRequest().cookie("LINF");
+            inSession();
+        }
     }
 
     public Request getRequest() {
@@ -23,15 +27,15 @@ public class Session {
     }
 
     public String getToken() {
-        return token;
+        return this.token;
     }
 
     public Account getAccount() {
-        return account;
+        return this.account;
     }
 
     public int getUserId() {
-        return userId;
+        return this.userId;
     }
 
     public boolean cookieAvailable() {
@@ -65,5 +69,16 @@ public class Session {
             }
         }
         return false;
+    }
+
+    @Override
+    public String toString() {
+        String out = "toString() @ Session \n";
+                out += "token: '" + this.token + "'\n";
+                out += "userId: '" + this.userId + "'\n";
+                out += "cookieAvailable(): '" + this.cookieAvailable() + "'\n";
+                out += "inSession(): '" + this.inSession() + "'";
+                out += "finished";
+        return out;
     }
 }

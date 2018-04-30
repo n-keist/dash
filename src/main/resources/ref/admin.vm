@@ -6,7 +6,8 @@
         <div class="alert alert-$failed.type">$failed.message</div>
         <a href="/app/login" class="btn btn-primary">Zurück zum Login</a>
     #else
-        <p>Admins Only </p>
+        <p>Top Admin feature: </p>
+        <p id="streamRandomInt">connection pending..</p>
     #end
 </div>
 

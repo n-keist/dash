@@ -6,7 +6,7 @@
         <div class="alert alert-$failed.type">$failed.message</div>
         <a href="/app/login" class="btn btn-primary">Zurück zum Login</a>
     #else
-
+        <p>Geschützter Bereich :dab:</p>
     #end
 </div>
 

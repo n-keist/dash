@@ -17,12 +17,10 @@ public class Admin implements Route {
         HashMap<String, Object> model = new HashMap<>();
 
         Session session = new Session(request);
-        System.out.println(session.cookieAvailable());
         if(session.inSession()) {
             Account account = session.getAccount();
             model.put("userName", account.getUsername());
             model.put("userId", account.getId());
-            System.out.println(account.getUsername() + ":" + account.getId());
         }
 
         return new VelocityTemplateEngine().render(new ModelAndView(model, "ref/admin.vm"));
